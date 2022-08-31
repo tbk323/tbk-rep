@@ -29,6 +29,17 @@
         </el-menu-item-group>
       </el-submenu>
       <!-- 分割线 -->
+      <el-submenu index="2">
+        <template slot="title">
+          <i class="el-icon-s-order" style="color: #eee"></i>
+          <span>配置工作流</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/workFlow">配置审批流程</el-menu-item>
+          <el-menu-item index="/worktype">配置审批类型</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
+      <!-- 分割线 -->
       <el-submenu index="3">
         <template slot="title">
           <i class="el-icon-postcard" style="color: #eee"></i>
@@ -39,7 +50,7 @@
         </el-menu-item-group>
       </el-submenu>
       <!-- 分割线 -->
-      <el-submenu index="2">
+      <el-submenu index="5">
         <template slot="title">
           <i class="el-icon-phone-outline" style="color: #eee"></i>
           <span>企业通讯</span>
@@ -58,7 +69,7 @@
         <el-menu-item-group>
           <el-menu-item index="/todo">待办事项</el-menu-item>
           <el-menu-item index="/done">已办事项</el-menu-item>
-          <el-menu-item index="/mySend">我发起的</el-menu-item>
+          <el-menu-item index="/Send">我发起的</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
     </el-menu>

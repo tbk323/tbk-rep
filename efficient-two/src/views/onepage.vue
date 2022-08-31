@@ -6,17 +6,20 @@
           <li>
             <p>待办事项 <span style="color: #39f">查看更多</span></p>
           </li>
-          <li v-for="(i, index) in list" :key="index">
-            <p>[待办事项]{{ i }} <span>2002年8月</span></p>
-          </li>
-          <li>
+          <div v-show="list.length !== 0">
+            <li v-for="(i, index) in list" :key="index">
+              <p>[待办事项]{{ i }} <span>2002年8月</span></p>
+            </li>
+          </div>
+          <li v-show="list.length == 0">
             <p>暂无待办事项</p>
           </li>
         </ul>
       </div>
       <!-- 日历 -->
       <div class="right">
-        <date :date="date"></date>
+        <!-- <el-calendar v-model="datevalue" class="date"> </el-calendar> -->
+        <!-- <date :date="value1"></date> -->
       </div>
     </div>
     <!-- 中间部分 -->
@@ -72,7 +75,8 @@ export default {
   components: { date },
   data() {
     return {
-      date: '',
+      datevalue: new Date(),
+      value1: '',
       list: ['您申请的报批还没审批', '您申请的报批还没审批']
     }
   },
@@ -179,6 +183,10 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+.date {
+  width: 90%;
+  height: 30px;
+}
 .user {
   border: 1px solid #dddddd;
   border-right: 0;
@@ -254,12 +262,12 @@ export default {
   margin-left: -27px;
   .left {
     flex: 6;
-    li:nth-child(1) {
-      font-size: 20px;
-    }
-    li:last-child {
-      text-align: center;
-    }
+    // li:nth-child(1) {
+    //   font-size: 20px;
+    // }
+    // li:last-child {
+    //   text-align: center;
+    // }
     li {
       padding: 10px;
       width: 100%;

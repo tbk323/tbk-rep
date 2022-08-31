@@ -26,6 +26,6 @@ app.use('/home/loginsearch', function (req, res) {
   )
 })
 
-app.listen(8090, () => {
-  console.log('监听端口 8090')
+app.listen(8888, () => {
+  console.log('监听端口 8888')
 })

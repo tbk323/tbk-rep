@@ -15,7 +15,7 @@ module.exports = defineConfig({
       [process.env.VUE_APP_API]: {
         target:
           process.env.VUE_APP_MOCK_ENABLE === 'true'
-            ? `http://localhost:8090`
+            ? `http://localhost:8888`
             : process.env.VUE_APP_CONSOLE_URL,
         changeOrigin: true,
         pathRewrite: {

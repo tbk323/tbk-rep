@@ -5,7 +5,7 @@ import getToken from './unth'
 // 创建一个 axios实例
 const http = axios.create({
   // 存放 公用的url路径的
-  baseURL: '',
+  baseURL: '/efficient',
   // 设置网络请求超时时间
   timeout: 3000,
   withCredentials: true,
